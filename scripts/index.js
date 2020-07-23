@@ -22,3 +22,18 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+
+// Send email to customer service
+function sendEmail() {
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "emailfortestingpurposeonly@gmail.com",
+        Password : "Emailfortestingpurposeonly123",
+        To : 'alan.xu@upgridgroup.com',
+        From : "emailfortestingpurposeonly@gmail.com",
+        Subject : "Test email",
+        Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+    }).then(
+        message => alert(message)
+    );
+}
